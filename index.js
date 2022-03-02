@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
-
+app.get("/",(req,res)=>{
+    res.send("test");
+})
 app.post("/bfhl", (req, res) => {
     const {data} = req.body;
     const numbers = [];
